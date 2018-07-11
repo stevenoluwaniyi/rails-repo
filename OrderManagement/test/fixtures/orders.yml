@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  channel: MyString
+  brand: MyString
+  customer_id: 
+  subtotal: 9.99
+  tax: 9.99
+  shipping_method: MyString
+
+two:
+  channel: MyString
+  brand: MyString
+  customer_id: 
+  subtotal: 9.99
+  tax: 9.99
+  shipping_method: MyString
