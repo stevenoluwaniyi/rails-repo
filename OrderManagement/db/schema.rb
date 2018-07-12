@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_07_212205) do
+ActiveRecord::Schema.define(version: 2018_07_12_001459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2018_07_07_212205) do
     t.string "channel"
     t.string "brand"
     t.integer "customer_id"
-    t.decimal "subtotal"
-    t.decimal "tax"
+    t.decimal "subtotal", precision: 10, scale: 2
+    t.decimal "tax", precision: 10, scale: 2
     t.string "shipping_method"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

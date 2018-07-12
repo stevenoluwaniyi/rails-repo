@@ -24,7 +24,7 @@ module Api
 			def destroy
 				order_stat = Order.find(params[:id]);
 				order_stat.delete;
-				render json: order_stat, status: :ok #okay
+				render json: order_stat, status: :ok 
 			end
 
 			#Get the ID of the order and update the neccessary attributes

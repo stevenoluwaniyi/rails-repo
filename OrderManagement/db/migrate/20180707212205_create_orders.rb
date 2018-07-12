@@ -4,8 +4,8 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.string :channel
       t.string :brand
       t.integer :customer_id
-      t.decimal :subtotal, precision: 10, scale: 2
-      t.decimal :tax, , precision: 10, scale: 2
+      t.decimal :subtotal
+      t.decimal :tax
       t.string :shipping_method
       
 
