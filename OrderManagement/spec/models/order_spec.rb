@@ -9,31 +9,40 @@ RSpec.describe Order, type: :model do
   	subject.subtotal = 13.34
   	subject.brand = "Deluxe"
   	subject.channel = "WEB"
+    subject.tax = 2.45
   	expect(subject).to be_valid
   end
 
-  it "is not valid without a customer id" do
-  	subject.customer_id = nil
-  	expect(subject).to_not be_valid
-  end
+  context 'validations' do
 
-  it "is not valid without a shipping method" do
-  	subject.shipping_method = nil
-  	expect(subject).to_not be_valid
-  end
+    it "is not valid without a customer id" do
+    	subject.customer_id = nil
+    	expect(subject).to_not be_valid
+    end
 
-  it "is not valid without a subtotal" do
-  	subject.subtotal = nil
-  	expect(subject).to_not be_valid
-  end
+    it "is not valid without a shipping method" do
+    	subject.shipping_method = nil
+    	expect(subject).to_not be_valid
+    end
 
-  it "is not vaild without a brand" do
-  	subject.brand = nil
-  	expect(subject).to_not be_valid
-  end
+    it "is not valid without a subtotal" do
+    	subject.subtotal = nil
+    	expect(subject).to_not be_valid
+    end
 
-  it "is not vaild without a channel" do
-  	subject.channel = nil
-  	expect(subject).to_not be_valid
+    it "is not vaild without a brand" do
+    	subject.brand = nil
+    	expect(subject).to_not be_valid
+    end
+
+    it "is not vaild without a channel" do
+    	subject.channel = nil
+    	expect(subject).to_not be_valid
+    end
+
+    it "is not valid with a string input" do
+      subject.subtotal = "test"
+      expect(subject).to_not be_valid
+    end
   end
 end
